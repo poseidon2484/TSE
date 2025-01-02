@@ -45,31 +45,40 @@
 body {
     background-color: #f1fbfd; /* Light gray background */
   }
-nav{
+  nav {
     display: flex;
     padding: 0% 4%;
-    justify-content: space-between;
+    justify-content: center; /* Center the items horizontally */
     align-items: center;
+    position: relative; /* Add relative positioning to adjust child elements */
 }
-nav img{
+
+nav img {
     width: 205px;
+    position: absolute; /* Position the image independently */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for image width */
 }
-.nav-links{
+
+.nav-links {
     flex: 1;
     text-align: right;
 }
-.nav-links ul li{
+
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
 }
-.nav-links ul li a{
+
+.nav-links ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 13px;
 }
-.nav-links ul li::after{
+
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -78,14 +87,16 @@ nav img{
     margin: auto;
     transition: .5s;    
 }
-.nav-links ul li:hover::after{
+
+.nav-links ul li:hover::after {
     width: 100%;
 }
-nav .fa{
+
+nav .fa {
     display: none;
 }
 
-.text-box{
+.text-box {
     width: 90%;
     color: #fff;
     position: absolute;
@@ -94,14 +105,17 @@ nav .fa{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.text-box h1{
+
+.text-box h1 {
     font-size: 62px;
 }
-.text-box p{
+
+.text-box p {
     margin: 20px 0 40px;
     font-size: 14px;
     color: #fff;
 }
+
 .hero-btn {
     display: inline-block;
     text-decoration: none;
@@ -115,23 +129,19 @@ nav .fa{
     transition: 1s;
 }
 
-.hero-btn:hover{
+.hero-btn:hover {
     border: 1px solid #f44336;
     background: #f44336;
-    transform:scale(1.2); /* Increase the size while keeping the skew */
+    transform: scale(1.2); /* Increase the size while keeping the skew */
     z-index: 10; /* Bring the text to the front on hover */
-    
 }
 
-
-@media(max-width: 700px)
-{
-   .nav-links ul li
-    {
+@media(max-width: 700px) {
+    .nav-links ul li {
         display: block;
     }
-    .nav-links
-    {
+
+    .nav-links {
         position: fixed;
         background: #f44336;
         height: 100vh;
@@ -142,17 +152,20 @@ nav .fa{
         z-index: 2;
         transition: 0.5s;
     }
-    .nav-links ul{
+
+    .nav-links ul {
         padding: 30px;
     }
-    nav .fa{
+
+    nav .fa {
         display: block;
         color: #fff;
         margin: 10px;
         font-size: 22px;
         cursor: pointer; 
     }
-    .text-box h1{
+
+    .text-box h1 {
         font-size: 20px;
     }
 }
@@ -565,7 +578,7 @@ h3 {
 .sub-header{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/bannerCTA.jpeg);
     background-position: center;
     background-size: cover;
     text-align: center;
