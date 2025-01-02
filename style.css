@@ -1,4 +1,12 @@
-*{
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -762,6 +770,32 @@ h3 {
 
 a{
     text-decoration: none;
+}
+
+
+/*scroll to top*/
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(55, 72, 167, 0.7); /* Translucent background */
+    color: white;
+    cursor: pointer;
+    width: 56px; /* Reduced width by 30% */
+    height: 56px; /* Reduced height by 30% */
+    border-radius: 50%; /* Perfect circle */
+    font-size: 25px; /* Adjusted font size to fit inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scrollToTop:hover {
+    background-color: rgba(85, 85, 85, 0.7); /* Translucent hover effect */
 }
 
 
